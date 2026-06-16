@@ -40,9 +40,10 @@ const addNewName = (name) => {
           })}
       </Main.List>
     </Main>
-
+    <Form>
+      <Form.Card />
+    </Form>
     <Counter />
-    <Form />
     </>
   )
 }

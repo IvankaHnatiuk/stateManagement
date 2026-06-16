@@ -2,7 +2,7 @@ import Items from "./Items";
 
 export default function List({children}){
     return (
-     <ul>
+     <ul className="list">
         {children}
      </ul>
     )

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Card from "./Card";
 
-export default function Form(){
+export default function Form({children}){
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [submittedData, setSubmittedDate] = useState(null);
@@ -9,16 +9,13 @@ export default function Form(){
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        setSubmittedDate({
-            name,
-            email,
-        })
+        setSubmittedDate({name,email })
         setName("");
         setEmail("");
     }
 
     if (submittedData) {
-      return <Card data={submittedData} />;
+      return <Form.Card data={submittedData} />;
     }
 
     return (
@@ -48,3 +45,4 @@ export default function Form(){
         </>
     )
 }
+Form.Card = Card;
