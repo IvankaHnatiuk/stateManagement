@@ -8,6 +8,7 @@ import { useState } from 'react';
 import Section from './components/Section';
 import Input from './components/Input';
 import Button from './components/Button';
+import LoadingData from './components/LoadingData';
 
 function App() {
 const [nameList, setNameList] = useState(['Anakin', 'Obi-wan']);
@@ -24,6 +25,7 @@ const addNewName = (name) => {
 
   return (
     <>
+    <LoadingData />
     <Header>
       <h1>Hollo there!</h1>
     </Header>
